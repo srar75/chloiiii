@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe6e6;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    color: #ff6b6b;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btnSi {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+#btnSi:hover {
+    background-color: #ff5252;
+    transform: scale(1.1);
+}
+
+#btnNo {
+    background-color: #b2bec3;
+    color: white;
+    position: relative;
+}
+
+.mensaje-amor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: aparecer 1s ease-in-out;
+}
+
+.mensaje-amor h1 {
+    font-size: 4rem;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+}
+
+.amor-imagen {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    animation: latido 1.5s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
